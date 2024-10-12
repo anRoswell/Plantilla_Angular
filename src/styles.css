@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'primeng/resources/themes/lara-light-blue/theme.css';
+@import 'primeng/resources/primeng.css';
+@import 'primeicons/primeicons.css';
+
+/* 
+ ?Se comenta Tailwind Base para que no sobre escriba los estilos
+ ?de PrimeNg 
+*/
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.custom-focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.5);
+}
+
+.p-avatar {
+  background-color: rgb(30, 64, 175) !important;
+  color: white !important;
+}
+
+.bg-red-custom {
+  background: rgba(253, 0, 0, 1);
+  background: -moz-linear-gradient(top, rgba(253, 0, 0, 1) 0%, rgba(182, 6, 6, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(253, 0, 0, 1)), color-stop(100%, rgba(182, 6, 6, 1)));
+  background: -webkit-linear-gradient(top, rgba(253, 0, 0, 1) 0%, rgba(182, 6, 6, 1) 100%);
+  background: -o-linear-gradient(top, rgba(253, 0, 0, 1) 0%, rgba(182, 6, 6, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(253, 0, 0, 1) 0%, rgba(182, 6, 6, 1) 100%);
+  background: linear-gradient(to bottom, rgba(253, 0, 0, 1) 0%, rgba(182, 6, 6, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd0000', endColorstr='#b60606', GradientType=0);
+
+  color: #ffffff;
+}
+
+.bg-blue-custom {
+  background: rgb(1, 1, 88);
+  background: linear-gradient(0deg, rgba(1, 1, 88, 1) 0%, rgba(0, 43, 107, 1) 100%);
+
+  color: #ffffff;
+}
+
+p-panelmenu .p-panelmenu-header .p-panelmenu-header-content .p-panelmenu-header-action {
+  padding: 0.5rem !important;
+  color: white !important;
+}
+
+.p-panelmenu .p-panelmenu-header .p-panelmenu-header-content {
+  background: transparent;
+  border-radius: 0px !important;
+  border: 0px !important;
+}
+
+.p-panelmenu .p-panelmenu-content {
+  background: transparent;
+  border-radius: 0px !important;
+  border: 0px !important;
+}
+
+.p-panelmenu .p-panelmenu-content .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+  color: white !important;
+}
+
+.p-panelmenu .p-panelmenu-content .p-menuitem > .p-menuitem-content .p-menuitem-link:hover{
+  background: red !important;
+}
