@@ -21,6 +21,9 @@ import { createEventId, INITIAL_EVENTS } from './event-utils';
 export class HomeComponent {
   calendarVisible = signal(true);
   calendarOptions = signal<CalendarOptions>({
+    // aspectRatio: 2.5,
+    timeZone: 'UTC',
+    // height: '100%',
     plugins: [interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin],
     headerToolbar: {
       left: 'prev,next today',

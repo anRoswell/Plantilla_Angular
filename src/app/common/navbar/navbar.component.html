@@ -1,4 +1,4 @@
-<header class="w-full bg-red-custom shadow-md">
+<header class="w-full bg-yellow-custom shadow-md">
   <nav class="w-full p-2 px-4 shadow-md flex justify-between items-center">
     <div class="flex items-center gap-4">
       <ng-content #name></ng-content>
@@ -8,7 +8,8 @@
     <div class="hidden md:block">
       <div class="card flex justify-center">
         <p-menu #menu [model]="items" [popup]="true" />
-        <p-avatar [label]="getInitials(person.name)" shape="circle" class="cursor-pointer" (click)="menu.toggle($event)" />
+        <p-avatar [label]="getInitials(person.name)" shape="circle" class="cursor-pointer"
+          (click)="menu.toggle($event)" />
       </div>
     </div>
   </nav>

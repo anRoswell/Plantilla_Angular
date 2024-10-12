@@ -30,7 +30,7 @@
     </div>
   </div> -->
 
-<div class='demo-app-main m-2 full-screen-div'>
+<div class='demo-app-main m-2'>
   <full-calendar *ngIf='calendarVisible()' [options]='calendarOptions()'>
     <ng-template #eventContent let-arg>
       <b>{{ arg.timeText }}</b>
