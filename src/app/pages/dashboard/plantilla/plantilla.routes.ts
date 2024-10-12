@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { ReportsComponent } from './reports.component'; // Importa el ReportsComponent
 import { HomeComponent } from './home/home.component';
+import { PlantillaComponent } from './plantilla.component';
 
-export const reportsRoutes: Routes = [
+export const PlantillaRoutes: Routes = [
   {
     path: '',
-    component: ReportsComponent,
+    component: PlantillaComponent,
     children: [
       {
         path: '',

@@ -1,0 +1,20 @@
+<div class="w-full h-screen grid grid-cols-5 gap-0 relative">
+  <aside [ngClass]="onSwitch ? 'col-span-1' : 'hidden'">
+    <app-sidebar [ngClass]="onSwitch ? 'fixed inset-0 z-30 md:relative inset-0 z-0' : 'hidden'"
+      [(switch)]="onSwitch"></app-sidebar>
+  </aside>
+
+  <main [ngClass]="onSwitch ? 'hidden md:block col-start-2 col-span-4' : 'col-start-1 col-span-5'"
+    class=" grid-flow-row col-span-4">
+    <div>
+      <app-navbar>
+        <button pButton size="small" icon="pi pi-align-justify"
+          class="custom-focus-ring bg-blue-950 border border-transparent hover:bg-blue-800" (click)="toggle()"></button>
+      </app-navbar>
+    </div>
+
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>

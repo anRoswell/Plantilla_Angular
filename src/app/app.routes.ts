@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./pages/auth/auth-routes').then((auth) => auth.authRoutes),
+    loadChildren: () => import('./pages/auth/auth.routes').then((auth) => auth.authRoutes),
   },
   {
     path: 'admin',

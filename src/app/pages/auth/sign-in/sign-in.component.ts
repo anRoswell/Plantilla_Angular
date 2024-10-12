@@ -47,7 +47,7 @@ export class SignInComponent {
 
         this.storageService.postStorage('token', 'fake-jwt-token', true);
 
-        this.router.navigate(['/admin/reportes']);
+        this.router.navigate(['/admin']);
 
         console.log('Inicio de sesión exitoso');
       } else {
