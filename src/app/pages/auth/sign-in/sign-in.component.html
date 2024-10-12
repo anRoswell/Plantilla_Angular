@@ -1,0 +1,61 @@
+<main class="w-full h-screen bg-blue-950 flex justify-center items-center p-4">
+  <section class="h-auto w-full overflow-hidden bg-white rounded-lg grid grid-cols-1 gap-4 md:h-full md:grid-cols-2 md:w-8/12">
+    <!-- Formulario -->
+    <form [formGroup]="authForm" class="p-8 flex flex-col justify-start order-2 md:order-1 md:justify-around" (submit)="onSubmit()">
+      <div class="text-center mb-4 md:mb-0">
+        <img src="assets/img/logo-rojo.png" alt="logo_aseo_panama" class="mx-auto w-32 md:w-40" />
+      </div>
+
+      <div class="mb-4">
+        <p-inputGroup>
+          <p-inputGroupAddon>
+            <i class="pi pi-user"></i>
+          </p-inputGroupAddon>
+          <input pInputText class="custom-focus-ring w-full" placeholder="email@example.com" formControlName="usr_email" />
+        </p-inputGroup>
+      </div>
+
+      <div class="mb-4">
+        <p-inputGroup>
+          <p-inputGroupAddon>
+            <i class="pi pi-lock"></i>
+          </p-inputGroupAddon>
+          <input pInputText [type]="onToggle ? 'text' : 'password'" class="custom-focus-ring w-full" placeholder="contraseña" formControlName="usr_password" />
+        </p-inputGroup>
+
+        <div class="py-2">
+          <p-checkbox [binary]="true" [label]="onToggle ? 'Ocultar contraseña' : 'Ver cotraseña'" class="custom-focus-ring" (click)="toggle()" />
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <button
+          class="custom-focus-ring w-full py-3 px-4 bg-blue-950 border border-transparent rounded-md text-sm text-white cursor-pointer flex justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-950"
+          type="submit"
+        >
+          Iniciar sesión
+        </button>
+      </div>
+
+      <div class="flex justify-center items-center mb-4">
+        <p>¿Olvido su contraseña? <a href="/" class="text-blue-500">Recuperala aqui</a></p>
+      </div>
+
+      <div class="flex justify-center items-center gap-4">
+        <p-button icon="pi pi-facebook" [rounded]="true" severity="danger" />
+        <p-button icon="pi pi-instagram" [rounded]="true" severity="danger" />
+        <p-button icon="pi pi-twitter" [rounded]="true" severity="danger" />
+      </div>
+    </form>
+
+    <!-- Imagen con Descripción -->
+    <div class="relative overflow-hidden flex items-center justify-center h-48 md:h-full w-full order-1 md:order-2 hidden lg:flex">
+      <img src="https://www.aseocapital.com.pa/wp-content/uploads/2022/02/nuestro_servicios.jpg" alt="image_seo_panama" class="object-cover w-full h-full" />
+      <div class="absolute inset-0 bg-red-500 opacity-70"></div>
+      <div class="w-10/12 absolute z-10 flex flex-col justify-center items-center p-4">
+        <img src="assets/img/logo-blanco.png" alt="" class="mb-4 w-32 md:w-40" />
+        <p class="text-center text-white text-sm md:text-base">Soluciones eficientes e integrales en el manejo de sus desechos.</p>
+      </div>
+    </div>
+  </section>
+</main>

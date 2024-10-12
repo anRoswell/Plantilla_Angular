@@ -1,0 +1,15 @@
+<header class="w-full bg-red-custom shadow-md">
+  <nav class="w-full p-2 px-4 shadow-md flex justify-between items-center">
+    <div class="flex items-center gap-4">
+      <ng-content #name></ng-content>
+      <!-- <img src="https://panamatoolkitnodejs.syspotec.co/assets/img/logo-blanco.png" alt="panama_logo" class="w-20" loading="lazy" /> -->
+    </div>
+
+    <div class="hidden md:block">
+      <div class="card flex justify-center">
+        <p-menu #menu [model]="items" [popup]="true" />
+        <p-avatar [label]="getInitials(person.name)" shape="circle" class="cursor-pointer" (click)="menu.toggle($event)" />
+      </div>
+    </div>
+  </nav>
+</header>
